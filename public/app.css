@@ -1,0 +1,20 @@
+.li-without-dot {
+    list-style: none;
+}
+.text-decoration-none {
+    text-decoration: none !important;
+}
+.list > li {
+    font-size: 14px;
+    border-bottom: 1px dotted #222222;
+}
+.list> li a{
+    color: #62707b;
+}
+.list >li a:hover{
+    color: #222222;
+  }
+  .file {
+    visibility: hidden;
+    position: absolute;
+  }

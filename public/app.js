@@ -1,0 +1,18 @@
+$(document).on("click", ".browse", function() {
+    var file = $(this).parents().find(".file");
+    file.trigger("click");
+  });
+  $('input[type="file"]').change(function(e) {
+    var fileName = e.target.files[0].name;
+    $("#file").val(fileName);
+
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      // get loaded data and render thumbnail.
+      document.getElementById("input-preview").src = e.target.result;
+      document.getElementById("input-preview").style.display = 'block';
+      document.getElementById("image-upload").style.display = 'block';
+    };
+    // read the image file as a data URL.
+    reader.readAsDataURL(this.files[0]);
+  });
